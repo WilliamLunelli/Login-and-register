@@ -59,6 +59,8 @@ Este comando irá iniciar:
 - **Frontend**: `http://127.0.0.1:3000`
 - **Backend**: `http://localhost:3001`
 
+> **Nota:** O projeto não requer arquivo `.env` pois usa valores padrão. O backend rodará automaticamente na porta 3001.
+
 ## 🔧 Endpoints da API
 
 ### Status do Servidor
@@ -184,6 +186,19 @@ npm run dev   # Inicia o servidor em modo desenvolvimento
 npm run build # Compila o TypeScript
 npm run start # Inicia o servidor compilado
 ```
+
+## ⚙️ Configurações Opcionais
+
+### Variáveis de Ambiente
+
+O projeto funciona sem configurações adicionais, mas você pode criar um arquivo `.env` na pasta `Backend` se desejar personalizar:
+
+```env
+PORT=3001
+NODE_ENV=development
+```
+
+Se não existir o arquivo `.env`, o projeto usará os valores padrão.
 
 ## 🔍 Configurações de CORS
 
