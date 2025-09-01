@@ -1,17 +1,16 @@
-import Express from "express";
+import express from "express";
 import helmet from "helmet";
-import path from "path";
-import authRouter from "./router/login-route";
 import cors from "cors";
+import authRouter from "./router/login-route.js";
 
-const FRONT_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"];
-const PORT = process.env.PORT || 3000;
-const server = Express();
+const FRONT_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"];
+
+const PORT = process.env.PORT || 3001;
+const server = express();
 
 server.use(helmet());
-server.use(Express.json());
-server.use(Express.urlencoded({ extended: true }));
-server.use(Express.static(path.join(__dirname, "../public")));
+server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
 server.use(
   cors({
     origin: FRONT_ORIGINS,
@@ -28,5 +27,4 @@ server.use("/auth", authRouter);
 
 server.listen(PORT, () => {
   console.log(`✅ Backend em: http://localhost:${PORT}`);
-  console.log(`🔓 CORS liberado para: ${FRONT_ORIGINS.join(", ")}`);
 });

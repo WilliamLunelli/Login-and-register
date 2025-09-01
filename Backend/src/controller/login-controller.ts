@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { authService } from "../service/login-service";
+import { authService } from "../service/login-service.js";
 
 export const LoginController = (req: Request, res: Response) => {
   const { email, password } = req.body;

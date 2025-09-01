@@ -233,7 +233,7 @@
 
     <script>
       // Ajuste a porta/origem do seu backend
-      const API_BASE = "http://localhost:3000";
+      const API_BASE = "http://localhost:3001";
 
       const successMsg = document.getElementById("successMsg");
       const errorMsg = document.getElementById("errorMsg");
@@ -286,11 +286,8 @@
               successMsg.style.display = "none";
             }, 3000);
 
-            // (opcional) limpar a senha
+            //limpar a senha
             document.getElementById("password").value = "";
-
-            // (opcional) impedir múltiplos cliques enquanto a msg está visível
-            // document.getElementById("loginForm").querySelector("button[type='submit']").disabled = true;
           } catch (err) {
             errorMsg.textContent =
               err.message || "Erro ao conectar com o servidor";
