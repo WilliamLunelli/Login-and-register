@@ -1,11 +1,11 @@
-# 📋 Projeto Login and Register
+# 📋 Projeto Login
 
 Sistema de login com frontend e backend separados, desenvolvido com TypeScript e Express.
 
 ## 🏗️ Estrutura do Projeto
 
 ```
-Login-and-register/
+Login/
 ├── Backend/
 │   ├── src/
 │   │   ├── controller/
